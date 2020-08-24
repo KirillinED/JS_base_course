@@ -1,0 +1,21 @@
+<script>
+	'use strict';
+
+	// Сделайте в стиле es5, конструктор Product, который
+	// принимает параметры name и price, сохраните их как свойства объекта. Также объекты типа Product
+	// должны иметь метод make25PercentDiscount, который будет уменьшать цену в объекте на 25%.
+
+	function Product(name, price) {
+		this.name = name;
+		this.price = price;
+	}
+
+	Product.prototype.make25PercentDiscount = function(){
+		this.price *= 0.75;
+	};
+
+	let product1 = new Product('Картофель', 1000);
+	console.log(`${product1.name} - ${product1.price}`);
+	product1.make25PercentDiscount();
+	console.log(`${product1.name} - ${product1.price}`);
+</script>
