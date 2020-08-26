@@ -1,0 +1,37 @@
+<script>
+	'use strict';
+
+	// Сделайте в стиле es5: 
+	// а) конструктор Post, который принимает параметры author, text, date и сохраняет их как свойства
+	// объекта. Объекты типа Post должны иметь метод edit, который будет принимать текст и записывать
+	// его в свойство text объекта.
+	// б) конструктор AttachedPost, который принимает параметры author, text, date.
+
+	function Post(author, text, date) {
+		this.author = author;
+		this.text = text;
+		this. date = date;
+	}
+
+	Post.prototype.edit = function(text){
+		this.text = text;
+	};
+
+	function AttachedPost(author, text, date) {
+		Post.call(this, author, text, date);
+		this.highlighted = false;
+	}
+
+	AttachedPost.prototype = Object.create((Post.prototype));
+	AttachedPost.prototype.makeTextHighlighted = function(){
+		this.highlighted = true;
+	};
+
+	let PostObject = new Post('John', 'lorem ipsum', '23.08.2020');
+	console.log(PostObject);
+	let AttachedPostObject = new AttachedPost('Mike', 'lorem dolorem', '23.08.2020');
+	console.log(AttachedPostObject);
+	AttachedPostObject.makeTextHighlighted();
+	AttachedPostObject.edit('Hello, world!')
+	console.log(AttachedPostObject);
+</script>

@@ -1,0 +1,44 @@
+<script>
+	'use strict';
+
+	// Сделайте в стиле es6: 
+	// а) конструктор Post, который принимает параметры author, text, date и сохраняет их как свойства
+	// объекта. Объекты типа Post должны иметь метод edit, который будет принимать текст и записывать
+	// его в свойство text объекта.
+	// б) конструктор AttachedPost, который принимает параметры author, text, date.
+
+	class Post {
+		constructor(author, text, date) {
+			this.autor = author;
+			this.text = text;
+			this.date = date;
+		}
+
+		edit(text){
+			this.text = text;
+		}
+	}
+
+	class AttachedPost extends Post {
+		constructor(author, text, date) {
+			super(author, text, date);
+			this.highlighted = false;
+		}
+
+		makeTextHighlighted() {
+			this.highlighted = true;
+		}
+	}
+
+	let PostObject = new Post('John', 'lorem ipsum', '23.08.2020');
+	console.log(PostObject);
+	PostObject.edit('SomethingText');
+	console.log(PostObject.text);
+
+	let AttachedPostObject = new AttachedPost('Mike', 'lorem dolorem', '23.08.2020');
+	console.log(AttachedPostObject);
+	AttachedPostObject.makeTextHighlighted();
+	AttachedPostObject.edit('Hello, world!');
+	console.log(AttachedPostObject);
+
+</script>
