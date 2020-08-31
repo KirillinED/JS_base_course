@@ -1,0 +1,124 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	margin: 0 5%;
+}
+
+header {
+	width: 100%;
+	min-height: 60px;
+	background-color: #ccc;
+}
+
+.basket {
+	position: relative;
+	float: right;
+	margin-top: 1%;
+	margin-right: 1%;
+}
+
+.basket select {
+	height: calc(50px / 1.8);
+	width: 90px;
+}
+
+.products {
+	display: flex;
+    justify-content: center;
+}
+
+.product {
+	margin: 20px 30px;
+	width: 200px;
+}
+
+.vertical img {
+	display: block;
+	width: 120px;
+	height: 200px;
+}
+
+.horizontal img {
+	display: block;
+	width: 200px;
+	height: 100px;
+}
+
+.productTitle {
+	font-family: sans-serif;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.description {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin-top: 20px;
+}
+
+.price {
+	font-family: sans-serif;
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+.toBasket {
+	background-color: lightgreen;
+	border: 1px solid darkgreen;
+	height: 25px;
+	font: 1em sans-serif;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.toBasket:hover {
+	background-color: green;
+}
+
+.fa-angle-down {
+	position: absolute;
+	right: 10%;
+	top: 5.5px;
+}
+
+.basketButton {
+	height: 25px;
+	width: 100px;
+	text-align: left;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.basketInfo {
+	visibility: hidden;
+	height: 200px;
+	width: 250px;
+	position: absolute;
+	right: 0;
+	top: 200%;
+	text-align: left;
+}
+
+.show {
+	visibility: visible;
+}
+
+.basketImg {
+	height: 50px;
+	width: 20px;
+}
+
+.fa-rub {
+	font-size: 12px;
+}
+
+tbody {
+	text-align: center;
+}
+
+.fa-trash {
+	cursor: pointer;
+}
