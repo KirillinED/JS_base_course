@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="basket">
+				<button type="button" class="basketButton">Корзина</button>
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+				<table class="basketInfo">
+					<thead>
+						<tr>
+							<th scope="col">ID</th>
+							<th scope="col">Имя</th>
+							<th scope="col">Цена</th>
+							<th scope="col">Количество</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tfoot>
+						<tr>
+							<th colspan="2" scope="row">Итого:</th>
+							<td colspan="3">
+								<span class="total"></span>
+								<i class="fa fa-rub" aria-hidden="true"></i>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</header>
+		<div class="content">
+			<div class="products">
+				<div class="product vertical">
+				    <div class="productTitle">Product1</div>
+				    <img src="img/orig.webp" alt="product" class="productImg img1">
+				    <div class="description">
+				    	Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Distinctio, quos.
+				    </div>
+				    <div class="price">10999 <i class="fa fa-rub" aria-hidden="true"></i></div>
+				    <button class="toBasket" type="button" data-productId="1" data-price="10999" data-name="Товар 1">В корзину</button>
+				</div>
+				<div class="product horizontal">
+				    <div class="productTitle">Product2</div>
+				    <img src="img/orig.png" alt="product" class="productImg img2">
+				    <div class="description">
+				    	Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Distinctio, quos.
+				    </div>
+				    <div class="price">6999 <i class="fa fa-rub" aria-hidden="true"></i></div>
+				    <button class="toBasket" type="button" data-productId="2" data-price="6999" data-name="Товар 2">В корзину</button>
+				</div>
+				<div class="product vertical">
+				    <div class="productTitle">Product3</div>
+				    <img src="img/orig.jfif" alt="product" class="productImg img3">
+				    <div class="description">
+				    	Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Distinctio, quos.
+				    </div>
+				    <div class="price">1999 <i class="fa fa-rub" aria-hidden="true"></i></div>
+				    <button class="toBasket" type="button" data-productId="3" data-price="1999" data-name="Товар 3">В корзину</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://kit.fontawesome.com/5d60df32b3.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="task_2.js"></script>
+</body>
+</html>
